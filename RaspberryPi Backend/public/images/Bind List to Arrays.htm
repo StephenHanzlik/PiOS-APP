@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<!-- saved from url=(0044)http://localhost:3000/bindListToArrays.html? -->
+<html ng-app="app" class="ng-scope"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style type="text/css">@charset "UTF-8";[ng\:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){display:none !important;}ng\:form{display:block;}.ng-animate-shim{visibility:hidden;}.ng-anchor{position:absolute;}</style>
+    
+    <title>Bind List to Arrays</title>
+    <script src="./Bind List to Arrays_files/angular.js"></script>
+  </head>
+  <body cz-shortcut-listen="true"><script id="__bs_script__">//<![CDATA[
+    document.write("<script async src='/browser-sync/browser-sync-client.js?v=2.18.5'><\/script>".replace("HOST", location.hostname));
+//]]></script><script async="" src="./Bind List to Arrays_files/browser-sync-client.js"></script>
+
+    <h1>Part 1: </h1>
+    <h2 class="ng-binding"> Hello, World</h2>
+    <p>input some info for the dinky <input type="text" ng-model="greeting" ng-init="greeting=&#39;Hello,&#39;" class="ng-pristine ng-untouched ng-valid ng-not-empty"></p>
+
+    <h1>Part 2:</h1>
+
+
+    <repeaters class="ng-isolate-scope">
+            <!-- ngRepeat: user in $ctrl.users --><div ng-repeat="user in $ctrl.users" class="ng-binding ng-scope">
+              <strong class="ng-binding">dinky</strong>: 23
+            </div><!-- end ngRepeat: user in $ctrl.users --><div ng-repeat="user in $ctrl.users" class="ng-binding ng-scope">
+              <strong class="ng-binding">kicker</strong>: 23
+            </div><!-- end ngRepeat: user in $ctrl.users --><div ng-repeat="user in $ctrl.users" class="ng-binding ng-scope">
+              <strong class="ng-binding">egg</strong>: 23
+            </div><!-- end ngRepeat: user in $ctrl.users --><div ng-repeat="user in $ctrl.users" class="ng-binding ng-scope">
+              <strong class="ng-binding">jyayayaz</strong>: 23
+            </div><!-- end ngRepeat: user in $ctrl.users -->
+          </repeaters>
+
+    <form ng-submit="$ctrl.addUser()" class="ng-valid ng-dirty ng-valid-parse ng-submitted" _lpchecked="1">
+      <input ng-model="$ctrl.user.name" placeholder="Enter a name" class="ng-valid ng-not-empty ng-dirty ng-valid-parse ng-touched">
+      <input ng-model="$ctrl.user.age" placeholder="Enter an age" class="ng-valid ng-not-empty ng-dirty ng-valid-parse ng-touched">
+      <input type="submit">
+    </form>
+
+    <script type="text/javascript">
+      angular.module("app", [])
+        .component('repeaters', {
+          controller: controller,
+          template:`
+            <div ng-repeat="user in $ctrl.users">
+              <strong>{{ user.name }}</strong>: {{ user.age }}
+            </div>
+          `
+        })
+          function controller() {
+            const vm = this
+
+            vm.$onInit = function () {
+              vm.users =[
+                {name:"dinky", age:23},
+                {name:"kicker", age:23},
+                {name:"egg", age:23},
+                {name:"jyayayaz", age:23}
+              ]
+            }
+
+            vm.dinky = function () {
+              console.log('hello');
+            }
+          }
+    </script>
+  
+
+<script aria-hidden="true" type="application/x-lastpass" id="hiddenlpsubmitdiv" style="display: none;"></script><script>try{(function() { for(var lastpass_iter=0; lastpass_iter < document.forms.length; lastpass_iter++){ var lastpass_f = document.forms[lastpass_iter]; if(typeof(lastpass_f.lpsubmitorig2)=="undefined"){ lastpass_f.lpsubmitorig2 = lastpass_f.submit; if (typeof(lastpass_f.lpsubmitorig2)=='object'){ continue;}lastpass_f.submit = function(){ var form=this; var customEvent = document.createEvent("Event"); customEvent.initEvent("lpCustomEvent", true, true); var d = document.getElementById("hiddenlpsubmitdiv"); if (d) {for(var i = 0; i < document.forms.length; i++){ if(document.forms[i]==form){ if (typeof(d.innerText) != 'undefined') { d.innerText=i.toString(); } else { d.textContent=i.toString(); } } } d.dispatchEvent(customEvent); }form.lpsubmitorig2(); } } }})()}catch(e){}</script></body></html>

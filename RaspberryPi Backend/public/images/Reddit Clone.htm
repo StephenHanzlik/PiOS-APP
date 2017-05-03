@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<!-- saved from url=(0022)http://localhost:3000/ -->
+<html ng-app="app" class="ng-scope"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style type="text/css">@charset "UTF-8";[ng\:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){display:none !important;}ng\:form{display:block;}.ng-animate-shim{visibility:hidden;}.ng-anchor{position:absolute;}</style>
+    
+    <title>Reddit Clone</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <link rel="stylesheet" href="./Reddit Clone_files/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  </head>
+  <body cz-shortcut-listen="true"><script id="__bs_script__">//<![CDATA[
+    document.write("<script async src='/browser-sync/browser-sync-client.js?v=2.18.5'><\/script>".replace("HOST", location.hostname));
+//]]></script><script async="" src="./Reddit Clone_files/browser-sync-client.js"></script>
+
+
+  <reddit class="ng-isolate-scope">
+
+  
+    
+    <title>Template</title>
+  
+  
+    <nav class="navbar navbar-default">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand">Reddit Clone</a>
+    </div>
+
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+    </div>
+  </div>
+</nav>
+
+<main class="container">
+
+  <div class="pull-right">
+    <p><a class="btn btn-info">New Post</a></p>
+  </div>
+
+  <ul class="nav nav-pills">
+    <li role="presentation" class="active">
+      <input type="search" class="form-control input-sm search-form ng-valid ng-dirty ng-valid-parse ng-not-empty ng-touched" placeholder="Filter" ng-model="searchText">
+    </li>
+    <li class="dropdown">
+      <a href="http://localhost:3000/#" class="dropdown-toggle ng-binding" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Sort by Votes<span class="caret"></span></a>
+      <ul class="dropdown-menu">
+        <li ng-click="$ctrl.dropInit = &#39;Votes&#39;"><a>Sort by Votes</a></li>
+        <li ng-click="$ctrl.dropInit = &#39;Date&#39;"><a>Sort by Date</a></li>
+        <li ng-click="$ctrl.dropInit = &#39;Title&#39;"><a>Sort by Title</a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <div class="row">
+    <div class="col-md-8">
+
+      <form ng-submit="$ctrl.addPost()" class="ng-pristine ng-valid">
+        <div>
+          <label for="title">Title</label>
+          <input id="title" class="form-control ng-pristine ng-untouched ng-valid ng-empty" ng-model="$ctrl.post.title" style="background-image: url(&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAfBJREFUWAntVk1OwkAUZkoDKza4Utm61iP0AqyIDXahN2BjwiHYGU+gizap4QDuegWN7lyCbMSlCQjU7yO0TOlAi6GwgJc0fT/fzPfmzet0crmD7HsFBAvQbrcrw+Gw5fu+AfOYvgylJ4TwCoVCs1ardYTruqfj8fgV5OUMSVVT93VdP9dAzpVvm5wJHZFbg2LQ2pEYOlZ/oiDvwNcsFoseY4PBwMCrhaeCJyKWZU37KOJcYdi27QdhcuuBIb073BvTNL8ln4NeeR6NRi/wxZKQcGurQs5oNhqLshzVTMBewW/LMU3TTNlO0ieTiStjYhUIyi6DAp0xbEdgTt+LE0aCKQw24U4llsCs4ZRJrYopB6RwqnpA1YQ5NGFZ1YQ41Z5S8IQQdP5laEBRJcD4Vj5DEsW2gE6s6g3d/YP/g+BDnT7GNi2qCjTwGd6riBzHaaCEd3Js01vwCPIbmWBRx1nwAN/1ov+/drgFWIlfKpVukyYihtgkXNp4mABK+1GtVr+SBhJDbBIubVw+Cd/TDgKO2DPiN3YUo6y/nDCNEIsqTKH1en2tcwA9FKEItyDi3aIh8Gl1sRrVnSDzNFDJT1bAy5xpOYGn5fP5JuL95ZjMIn1ya7j5dPGfv0A5eAnpZUY3n5jXcoec5J67D9q+VuAPM47D3XaSeL4AAAAASUVORK5CYII=&quot;); background-repeat: no-repeat; background-attachment: scroll; background-size: 16px 18px; background-position: 98% 50%; cursor: auto;">
+
+        </div>
+        <div>
+          <label for="body">Body</label>
+          <textarea id="body" class="form-control ng-pristine ng-untouched ng-valid ng-empty" name="body" ng-model="$ctrl.post.body"></textarea>
+        </div>
+        <div>
+          <label for="author">Author</label>
+          <input id="author" class="form-control ng-pristine ng-untouched ng-valid ng-empty" ng-model="$ctrl.post.author">
+        </div>
+        <div>
+          <label for="image-url">Image URL</label>
+          <input id="image-url" class="form-control ng-pristine ng-untouched ng-valid ng-empty" ng-model="$ctrl.post.image">
+        </div>
+        <div class="form-group">
+          <button type="submit" class="btn btn-primary">
+            Create Post
+          </button>
+        </div>
+      </form>
+
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-12">
+
+      <!-- ngRepeat: post in $ctrl.posts | filter:searchText  --><div class="well ng-scope" ng-repeat="post in $ctrl.posts | filter:searchText ">
+        <div class="media-left">
+          <img class="media-object ng-pristine ng-untouched ng-valid ng-empty" ng-model="$ctrl.posts.image">
+        </div>
+        <div class="media-body">
+          <h4 class="media-heading ng-binding">
+            alpha did what?!?
+            <a><i class="glyphicon glyphicon-arrow-up"></i></a>
+            <a><i class="glyphicon glyphicon-arrow-down"></i></a>
+            10
+          </h4>
+          <div class="text-right ng-binding">
+            author: Dinky
+          </div>
+          <p class="ng-binding">
+            he pooped on the rug
+          </p>
+          <div>
+            Some time ago
+            |
+            <i class="glyphicon glyphicon-comment"></i>
+            <a>
+              Some comments
+            </a>
+          </div>
+          <div class="row">
+            <div class="col-md-offset-1">
+              <hr>
+              <p>
+                Comment text
+              </p>
+              <form class="form-inline ng-pristine ng-valid">
+                <div class="form-group">
+                  <input class="form-control">
+                </div>
+                <div class="form-group">
+                  <input type="submit" class="btn btn-primary">
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div><!-- end ngRepeat: post in $ctrl.posts | filter:searchText  -->
+
+    </div>
+  </div>
+</main>
+  
+
+</reddit>
+    <script src="./Reddit Clone_files/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+    <script src="./Reddit Clone_files/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script src="./Reddit Clone_files/angular.min.js"></script>
+    <script src="./Reddit Clone_files/app.js"></script>
+    <script src="./Reddit Clone_files/component.js"></script>
+  
+
+<script aria-hidden="true" type="application/x-lastpass" id="hiddenlpsubmitdiv" style="display: none;"></script><script>try{(function() { for(var lastpass_iter=0; lastpass_iter < document.forms.length; lastpass_iter++){ var lastpass_f = document.forms[lastpass_iter]; if(typeof(lastpass_f.lpsubmitorig2)=="undefined"){ lastpass_f.lpsubmitorig2 = lastpass_f.submit; if (typeof(lastpass_f.lpsubmitorig2)=='object'){ continue;}lastpass_f.submit = function(){ var form=this; var customEvent = document.createEvent("Event"); customEvent.initEvent("lpCustomEvent", true, true); var d = document.getElementById("hiddenlpsubmitdiv"); if (d) {for(var i = 0; i < document.forms.length; i++){ if(document.forms[i]==form){ if (typeof(d.innerText) != 'undefined') { d.innerText=i.toString(); } else { d.textContent=i.toString(); } } } d.dispatchEvent(customEvent); }form.lpsubmitorig2(); } } }})()}catch(e){}</script></body></html>

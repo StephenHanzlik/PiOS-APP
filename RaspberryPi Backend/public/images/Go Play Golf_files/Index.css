@@ -1,0 +1,402 @@
+﻿.greenBar
+{
+    min-width: 755px;
+    background-color: #005030;
+}
+
+.pageHeaderOne
+{
+    text-align: center;
+    color: #fff;
+    font-size: 38px;
+    line-height: 38px;
+    font-family: 'Muli', sans-serif;
+    padding: 20px 0;
+}
+
+.section + .section {
+    margin-top: 10px;
+}
+
+::-webkit-input-placeholder {
+    font-style: italic;
+}
+
+::-moz-placeholder {
+    font-style: italic;
+}
+
+/* firefox 19+ */
+:-ms-input-placeholder {
+    font-style: italic;
+}
+
+/* ie */
+input:-moz-placeholder {
+    font-style: italic;
+}
+
+.sectionHeader {
+    padding: 5px 0 5px 10px;
+    font-weight: bold;
+    background-color: #dadada;
+    font-size: 108%;
+}
+
+.sectionBody {
+    padding: 10px;
+}
+
+input[type=text], select {
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+
+input[type=text],
+textarea,
+select {
+    border: 1px solid #CDCDCD;
+    border-radius: 0;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1) inset;
+    color: #666;
+    font-family: sans-serif;
+    line-height: 14px;
+    padding: 12px 7px;
+    transition: box-shadow 0.45s ease 0s, border-color 0.45s ease-in-out 0s;
+    height: 41px;
+}
+
+li {
+    font-size: 90%;
+}
+
+.CartContainer {
+    display: none;
+}
+
+.checkoutContianer {
+    float: left;
+    width: 755px;
+}
+
+.CartSpacer {
+    height: 20px;
+    float: right;
+    width: 50px;
+    border-radius: 5px;
+}
+
+label.error {
+    background-color: #f8dede;
+    border: 2px solid #cc3333;
+    color: #cc3333;
+    font-family: sans-serif;
+    font-size: 11px;
+    line-height: 1;
+    margin: 0;
+    padding: 5px;
+    position: absolute;
+    text-align: left;
+    width: 200px;
+    z-index: 25;
+}
+
+label.error:after {
+    content: "";
+    display: block;
+    border-width: 0 7px 7px;
+    border-style: solid;
+    border-color: #cc3333 transparent;
+    left: 10px;
+    position: absolute;
+    top: -8px;
+    width: 0;
+}
+
+.field {
+    position: relative;
+    overflow: visible;
+    margin-top: 5px;
+}
+
+.cartItem
+{
+    margin: 5px;
+    padding: 5px;
+    border: 1px solid #ccc;
+    font-size: 13px;
+    line-height: 18px;
+    font-family: museo_sans500;
+}
+
+.cartActionBar
+{
+    margin: 5px 10px;
+    text-align: right;
+}
+
+.cartActionButton
+{
+    padding: 5px 0;
+    display: inline-block;
+    width: 90px;
+    text-align: center;
+    border-radius: 5px 5px 5px 10px;
+    -moz-border-radius: 10px 10px 10px 10px;
+    -webkit-border-radius: 10px 10px 10px 10px;
+    border: 0px solid #000000;
+}
+
+.cartActionButton:hover
+{
+    background-color: #999;
+    color: #fff;
+}
+
+.cartItemGiftBox
+{
+    background-color: #eee;
+    border: 1px solid #ccc;
+    padding: 5px 0 5px 10px;
+}
+
+.cartItemWrapper
+{
+    margin: 0 3px 3px 3px; 
+    padding: 1px 0; 
+    background: #fff;
+    border: 1px solid #aaaaaa;
+}
+
+.cartTotals
+{
+    margin: 0 3px 3px 3px; 
+    padding: 10px; 
+    background: #f5f5f5;
+    border: 1px solid #aaaaaa;
+    font-family: museo_sans500;
+    font-size: 14px;
+    line-height: 16px;
+}
+
+.topSection {
+    min-height: 320px;
+    min-width: 755px;
+}
+
+.headerText
+{
+    float: right; 
+    width: 400px;
+    font-size: 28px;
+    line-height: 30px; 
+}
+
+.clearFix
+{
+    clear: both;
+}
+
+.giftBox 
+{
+    float: left;
+    margin-top: 0;
+}
+
+.giftBoxTitle 
+{
+    font-weight: bold;
+    color: #4c8b2b;
+    text-align: center;
+}
+
+.giftBoxImageArea
+{
+    cursor: pointer;
+    text-align: center !important;
+}
+
+.giftBoxImage
+{
+    width: 200px;
+    height: 160px;
+    box-shadow: 0 1px 10px #BABABA;
+    border: 1px solid green;
+    margin-bottom: 10px;
+}
+
+.giftBoxAmount
+{
+    text-align: center;
+    font-weight: bold; 
+    font-size: 108%;
+}
+
+.giftBoxButton
+{
+    cursor: pointer;
+    text-align: center; 
+    padding-top: 5px;
+}
+
+.gbPageHeader
+{
+    font-size: 110%; 
+    font-weight: bold;
+}
+
+.gbDetailSectionOne
+{
+    float: left;
+    font-size: 100%;
+}
+
+.gbDetailSectionTwo 
+{
+    width: 450px;
+    float: left;
+    padding: 0px 0 0 15px;
+    text-align: justify;
+}
+
+.changeButton
+{
+    display: inline-block;
+    vertical-align: top;
+    cursor: pointer;
+    text-align: center;
+}
+.blackOut
+{
+    background-color: rgba(0, 0, 0, 0.70);
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0; 
+    right: 0;
+    z-index: 99;
+}
+
+.giftBoxPopup 
+{
+    position: fixed;
+    background-color: #fff;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    top: 60px; 
+    z-index: 9999;
+    padding: 20px;
+    position: fixed;
+    left: 50%;
+    transform: translate(-50%, 0);
+    overflow-y: auto;
+    max-height: 600px;
+    min-width: 620px;
+}
+
+.gbPopupDetailSectionOne
+{
+    font-size: 100%;
+}
+
+.gbPopupDetailSectionTwo 
+{
+
+}
+
+.dynamic-style-contents ul {
+    list-style: initial !important;
+    max-width: 600px !important;
+}
+
+.dynamic-style-contents ul li {
+    list-style: initial !important;
+    text-align: left !important;
+}
+
+.giftBoxImageAreaSmall
+{
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    margin: 0 5px 5px 5px;
+    cursor: pointer;
+}
+
+.giftBoxImageSmall
+{
+    width: 40px;
+    height: 40px;
+}
+
+.viewDetails 
+{
+    font-size: 60%;
+    cursor: pointer;
+    color: #999;
+}
+
+.dynamic-style-contents {
+    font-weight: bold;
+    margin-top: 10px;
+}
+.dynamic-style-contents span {
+    font-weight: normal;
+}
+
+button.giftBoxPopupSelect {
+    display: block;
+}
+@media screen and (max-width: 770px) {
+    button.giftBoxPopupSelect {
+        display: inline-block;
+    }
+}
+
+@media screen and (max-width: 460px) {
+    button.giftBoxPopupSelect {
+        display: inline-block;
+    }
+    div.giftBoxPopup {
+        min-width: 320px;
+    }
+    .giftBoxImageSmall {
+        width: 30px;
+        height: 30px;
+    }
+    .giftBoxImageAreaSmall {
+        width: 30px;
+        height: 30px;
+        display: inline-block;
+    }
+}
+
+@media screen and (max-height: 670px) {
+    div.giftBoxPopup {
+        max-height: 500px;
+    }
+}
+
+@media screen and (max-height: 460px) {
+    div.giftBoxPopup {
+        max-height: 280px;
+    }
+}
+
+@media screen and (min-width: 980px){
+    .topSection 
+    {
+        background-position: 300px 70px;
+    }
+}
+
+@media screen and (min-width: 1200px){
+  .CartContainer {
+        display: block;
+        float: right;
+        background-color: #dadada;
+        border: 1px solid #cccccc;
+        width: 280px;
+    }
+}
